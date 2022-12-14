@@ -1,0 +1,27 @@
+<h2>Complaint List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Points(OutOf 10)</th>
+            <th>Complaints</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let complaint of complaints">
+            <td>{{complaint.id}}</td>
+            <td>{{complaint.productid}}</td>
+            <td>{{complaint.productname}}</td>
+            <td>{{complaint.points}}</td>
+            <td>{{complaint.complaints}}</td>
+            <td>
+                <button (click) ="updateComplaint(complaint.id)" class="btn btn-info">Update</button>
+                <button (click) ="deleteComplaint(complaint.id)" class="btn btn-danger" style="margin-left: 10px" >Delete</button>
+                <button (click) ="complaintDetails(complaint.id)" class="btn btn-info" style="margin-left: 10px" >View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

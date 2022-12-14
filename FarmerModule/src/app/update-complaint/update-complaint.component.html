@@ -1,0 +1,32 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Update Complaints</h3>
+    <form (ngSubmit) = "onSubmit()">
+
+        <div class="form-group">
+          <label>Id</label>
+          <input type="text" class="form-control" id="id"
+            [(ngModel)] = "complaint.id" name="id">
+        </div> 
+        <div class="form-group">
+            <label>Product Id</label>
+            <input type="text" class="form-control" id="productid"
+              [(ngModel)] = "complaint.productid" name="productid">
+          </div>
+          <div class="form-group">
+            <label>Product Name</label>   
+            <input type="text" class="form-control" id="productname"
+              [(ngModel)] = "complaint.productname" name="productname">
+          </div>
+          <div class="form-group">
+            <label>Points(OutOf 10)</label>
+            <input type="text" class="form-control" id="points"
+              [(ngModel)] = "complaint.points" name="points">
+          </div>
+          <div class="form-group">
+            <label>Complaints</label>
+            <input type="text" class="form-control" id="complaints"
+              [(ngModel)] = "complaint.complaints" name="complaints">
+          </div>
+          <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+    </div>

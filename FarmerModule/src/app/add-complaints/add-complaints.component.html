@@ -1,0 +1,56 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Add Complaints</h3>
+    <form [formGroup]="form" (ngSubmit) = "onSubmit()" #localForm="ngForm">
+       
+        <div class="form-group">
+            <label>Product Id</label>
+            <input type="text" class="form-control" id="productid"
+              [(ngModel)] = "complaint.productid" name="productid"
+              formControlName="productid"
+              [class.is-invalid]="localForm.submitted && form.get('productid')?.invalid"
+              />
+              <div class="invalid-feedback">
+                  ProductId is required
+              </div>
+
+
+          </div>
+          <div class="form-group">
+            <label>Product Name</label>   
+            <input type="text" class="form-control" id="productname"
+              [(ngModel)] = "complaint.productname" name="productname"
+              formControlName="productname"
+              [class.is-invalid]="localForm.submitted && form.get('productname')?.invalid"
+              />
+              <div class="invalid-feedback">
+                  productname is required
+              </div>
+          </div>
+
+          <div class="form-group">
+            <label>Points(OutOf 10)</label>
+            <input type="text" class="form-control" id="points"
+              [(ngModel)] = "complaint.points" name="points"
+              formControlName="points"
+              [class.is-invalid]="localForm.submitted && form.get('points')?.invalid"
+              />
+              <div class="invalid-feedback">
+                point is required
+              </div>
+          </div>
+
+          <div class="form-group">
+            <label>Complaints</label>
+            <input type="text" class="form-control" id="complaints"
+              [(ngModel)] = "complaint.complaints" name="complaints"
+              formControlName="complaints"
+              [class.is-invalid]="localForm.submitted && form.get('complaints')?.invalid"
+              />
+              <div class="invalid-feedback">
+                complaints is required
+              </div>
+          </div>
+          <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+    </div>
+    
